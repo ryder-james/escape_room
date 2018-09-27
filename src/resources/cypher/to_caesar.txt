@@ -1,0 +1,11 @@
+03/28/333010
+
+Caesar,
+
+It appears that the password file was corrupted in transfer. 
+Please advise.
+
+P.S.
+File may be recoverable, but that's a hassle...
+
+Cypher

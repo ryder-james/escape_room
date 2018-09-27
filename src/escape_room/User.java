@@ -39,5 +39,10 @@ public class User {
 	public boolean checkPass(String password) {
 		return password.equals(this.password);
 	}
+	
+	@Override
+	public String toString() {
+		return this.username + (this.isAdmin() ? ", admin" : "");
+	}
 
 }

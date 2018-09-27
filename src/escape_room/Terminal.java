@@ -63,7 +63,12 @@ public class Terminal {
 				userSwitch(userIn);
 				break;
 			case WHO:
-				System.out.println(currentUser.getName());
+				System.out.println(currentUser);
+				break;
+			case USERS:
+				for (User user : users) {
+					System.out.println(user);
+				}
 				break;
 			case TOE:
 				if (currentUser.isAdmin()) {
@@ -86,7 +91,7 @@ public class Terminal {
 	}
 	
 	private void initUsers() {
-		users.add(new User("Cypher", "gay"));
+		users.add(new User("Cypher", "password"));
 		users.add(new User("Caesar", "m@rt1an", true));
 	}
 	

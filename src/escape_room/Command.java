@@ -3,7 +3,8 @@ package escape_room;
 public enum Command {
 	
 	HELP("help", "Displays this text."),
-	WHO("user", "Prints current user."),
+	WHO("whoami", "Prints current user."),
+	USERS("users", "Prints users on the current system."),
 	SWITCH("switch_user", "Allows you to log in as a different user."),
 	LOGS("logs", "Display all logs for this user."),
 	TOE("unlock_toe", "Admin only. Allows access to the T.O.E."),

@@ -2,8 +2,8 @@ DATA ANALYSIS
 
 Begin Recording
 
-Int. Temperature: 65 degrees, dropping
-Ext. Temperature: -353 degrees, stable
+Int. Temperature: Six-five degrees, dropping
+Ext. Temperature: Negative three-five-three, stable
 Int. Atmosphere: Breathable
 Ext. Atmosphere: Hydrogen, Helium, Methane traces
 
