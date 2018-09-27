@@ -1,29 +1,30 @@
 package escape_room;
 
-public enum Commands {
+public enum Command {
 	
 	HELP("help", "Displays this text."),
 	WHO("user", "Prints current user."),
 	SWITCH("switch_user", "Allows you to log in as a different user."),
 	LOGS("logs", "Display all logs for this user."),
+	TOE("unlock_toe", "Admin only. Allows access to the T.O.E."),
 	EXIT("exit", "Exits the program.");
 	
 	private String command;
 	private String message;
 	
-	private Commands(String command, String message) {
+	private Command(String command, String message) {
 		this.command = command;
 		this.message = message;
 	}
 	
 	public static void printHelp() {
-		for (Commands command : Commands.values()) {
+		for (Command command : Command.values()) {
 			System.out.println(command);
 		}
 	}
 	
-	public static Commands getFromCommand(String commandStr) {
-		for (Commands command : Commands.values()) {
+	public static Command getFromCommand(String commandStr) {
+		for (Command command : Command.values()) {
 			if (command.getCommand().equalsIgnoreCase(commandStr)) {
 				return command;
 			}

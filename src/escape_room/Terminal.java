@@ -25,7 +25,7 @@ public class Terminal {
 		Scanner userIn = new Scanner(System.in);
 		
 		String input = "";
-		Commands command = null;
+		Command command = null;
 		
 		while (true) {
 			
@@ -33,7 +33,7 @@ public class Terminal {
 			System.out.println("Type the name of a log to open it or type help for more commands.");
 			System.out.println(SPACER);
 			input = userIn.nextLine();
-			command = Commands.getFromCommand(input);
+			command = Command.getFromCommand(input);
 			System.out.println();
 			
 			if (command == null) {
@@ -52,7 +52,7 @@ public class Terminal {
 				userIn.close();
 				return;
 			case HELP:
-				Commands.printHelp();
+				Command.printHelp();
 				break;
 			case LOGS:
 				for (File log : currentUser.getLogFiles()) {
@@ -65,6 +65,17 @@ public class Terminal {
 			case WHO:
 				System.out.println(currentUser.getName());
 				break;
+			case TOE:
+				if (currentUser.isAdmin()) {
+					if (attemptToeRelease(userIn)) {
+						System.out.println("The password to open the case is MOBO.");
+					} else {
+						System.out.println("Incorrect password.");
+					}
+				} else {
+					System.out.println("Err: Permission denied");
+				}
+				break;
 			default:
 				System.out.println("Unknown command");
 				break;
@@ -76,7 +87,7 @@ public class Terminal {
 	
 	private void initUsers() {
 		users.add(new User("Cypher", "gay"));
-		users.add(new User("Caesar", "m@rt1an"));
+		users.add(new User("Caesar", "m@rt1an", true));
 	}
 	
 	private void userSwitch(Scanner scanner) {
@@ -109,6 +120,17 @@ public class Terminal {
 		}
 		
 		System.out.println("Unknown user");
+		
+	}
+	
+	private boolean attemptToeRelease(Scanner scanner) {
+		
+		String pass;
+		
+		System.out.print("Please enter case override password: ");
+		pass = scanner.nextLine();
+		
+		return pass.equalsIgnoreCase("leave");
 		
 	}
 	
