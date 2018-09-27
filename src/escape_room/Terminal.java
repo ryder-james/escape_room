@@ -39,7 +39,7 @@ public class Terminal {
 			if (command == null) {
 				for (File file : currentUser.getLogFiles()) {
 					if (input.equals(file.getName().substring(0, file.getName().indexOf('.')))) {
-						printFile(file.getAbsolutePath());
+						printFile(file);
 						break;
 					}
 				}
@@ -134,12 +134,12 @@ public class Terminal {
 		
 	}
 	
-	private void printFile(String fileName) {
+	private void printFile(File file) {
 		
 		Scanner fileIn;
 		
 		try {
-			fileIn = new Scanner(new File(fileName));
+			fileIn = new Scanner(file);
 
 			while (fileIn.hasNextLine()) {
 				System.out.println(fileIn.nextLine());
