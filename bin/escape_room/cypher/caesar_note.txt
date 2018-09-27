@@ -3,7 +3,12 @@
 
 Dr. Cypher,
 
-I have reviewed the data you sent me. I am extremely concerned about our safety, as our temperature hasn't been stable in days. If it comes down to it, remember - OHDYH.
+I have reviewed the data you sent me. 
+I am extremely concerned about our safety, 
+as our temperature hasn't been stable in 
+days. 
+
+If it comes down to it, remember - OHDYH.
 
 Regards,
 Dr. Caesar

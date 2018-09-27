@@ -1,7 +1,7 @@
-03/01
-333011
+DATA ANALYSIS
 
-Data Analysis
+Begin Recording
+
 Int. Temperature: 65 degrees, dropping
 Ext. Temperature: -353 degrees, stable
 Int. Atmosphere: Breathable
